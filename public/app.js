@@ -1,3 +1,5 @@
+data = [{name: "Name: Bob",  food: "Favorite Food: Kebab", image: "images/maxresdefault.jpg"},{name: "Name: Kapowsky",  food: "Favorite Food: Milk", image: "images/Russian-blue-cat.jpg"},{name: "Name: Wrinkles",  food: "Favorite Food: Sardines", image: "images/wrinkle-cat.jpg"}]
+
 var createCatUl = function(){
   var catUl = document.createElement("ul");
   catUl.classList.add("cat");
@@ -41,7 +43,8 @@ var addCat = function(name, favFood, sourceImg){
 
 var app = function(){
 
-  addCat("Name: Bob", "Favorite food: Kebab", "images/maxresdefault.jpg");
+for(cat of data){
+  addCat(cat.name, cat.food, cat.image);
 }
 
 window.onload = app;
