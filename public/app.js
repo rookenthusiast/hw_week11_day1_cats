@@ -42,9 +42,8 @@ var addCat = function(name, favFood, sourceImg){
 }
 
 var app = function(){
-
 for(cat of data){
   addCat(cat.name, cat.food, cat.image);
 }
-
+}
 window.onload = app;
